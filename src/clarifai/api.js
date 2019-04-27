@@ -5,8 +5,11 @@ const cors = require("cors");
 //Controllers
 const image = require("./image");
 
-const app = express();
 
+
+const getColors = (imgUrl) => {
+  const app = express();
+}
 //Middleware
 app.use(cors());
 app.use(bodyParser.json());
