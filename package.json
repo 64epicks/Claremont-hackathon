@@ -1,0 +1,23 @@
+{
+  "name": "claremont-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/64epicks/Claremont-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/64epicks/Claremont-hackathon/issues"
+  },
+  "homepage": "https://github.com/64epicks/Claremont-hackathon#readme",
+  "dependencies": {
+    "clarifai": "^2.9.0",
+    "express": "^4.16.4"
+  }
+}
