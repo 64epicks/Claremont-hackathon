@@ -6,36 +6,28 @@ const functions = require('firebase-functions');
 const app = dialogflow({debug: true});
 
 app.intent('make_name', (conv, {imageStr}) => {
-  if(imageStr == "first")
-  {
-    conv.close(`To listen to the soundscape of the first image, say Ok google play the G flat note`);
-  }
-  else 
-  {
-    conv.close(`To listen to the soundscape of the first image, say Ok google play the G flat note`);
-  }
-  // var imageName = "";
-  // if(imageStr == "first")
-  // {
-  //   imageName = "image1";
-  // }
-  // else
-  // {
-  //   imageName = "image2";
-  // }
+   var imageName = "";
+   if(imageStr == "first")
+   {
+     imageName = "image1";
+   }
+   else
+   {
+     imageName = "image2";
+   }
 
-  // fetch("http://64epicks.com:8080(imageurl", {
-  //   method: "post",
-  //   headers: {
-  //     "Content-Type": "application/json"
-  //   },
-  //   body: JSON.stringify({
-  //     input: imageName
-  //   })
-  // })
-  // .then(data => {
-  //   conv.close(`To listen to the soundscape, say Ok google play a ${data}`);
-  // });
+   fetch("http://64epicks.com:8080(imageurl", {
+     method: "post",
+     headers: {
+       "Content-Type": "application/json"
+     },
+     body: JSON.stringify({
+       input: imageName
+     })
+   })
+   .then(data => {
+     conv.close(`To listen to the soundscape, say Ok google play a ${data}`);
+  });
 });
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest(app);
