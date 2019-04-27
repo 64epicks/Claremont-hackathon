@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const getChord = require("mapper")
+const getChord = require("mapper");
 
 //Controllers
 const image = require("./clarifai/image");
@@ -22,11 +22,12 @@ const req = {
 app.get("/", (req, res) => {
   res.send("This is the ColorChecker server");
 });
-app.post(
-  "/imageurl", 
-  (req, res) => 
-    image.handleApiCall(req, res).then((data) =>  { console.log(data)}));
+app.post("/imageurl", (req, res) =>
+  image.handleApiCall(req, res).then(data => {
+    console.log(data);
+  })
+);
 
-// app.listen(3000, () => {
-//   console.log(`app is running on port 3000`);
-// });
+app.listen(3000, () => {
+  console.log(`app is running on port 3000`);
+});
