@@ -15,11 +15,7 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
   res.send("This is the ColorChecker server");
 });
-app.post("/imageurl", (req, res) =>
-  image.handleApiCall(req, res).then(data => {
-    console.log(data);
-  })
-);
+app.post("/imageurl", (req, res) => image.handleApiCall(req, res));
 
 app.listen(3000, () => {
   console.log(`app is running on port 3000`);
