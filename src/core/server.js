@@ -1,22 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const getChord = require("mapper");
 
 //Controllers
-const image = require("./clarifai/image");
+const image = require("../clarifai/image");
 
 const app = express();
 
 //Middleware
 app.use(cors());
 app.use(bodyParser.json());
-
-const imageName = "image one";
-
-const req = {
-  input: getChord(imageName)
-};
 
 //End-points
 app.get("/", (req, res) => {

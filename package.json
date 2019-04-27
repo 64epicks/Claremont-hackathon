@@ -2,10 +2,10 @@
   "name": "claremont-hackathon",
   "version": "1.0.0",
   "description": "",
-  "main": "/core/server.js",
+  "main": "./src/core/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/clarifai/server.js"
+    "start": "node ./src/core/server.js"
   },
   "repository": {
     "type": "git",
